@@ -110,7 +110,7 @@ function rdcl_style(feature){
 }
 
 //道路中心線レイヤ
-var rdcllayer = L.tileLayer.canvas({attribution:"道路中心線",minZoom:14,maxNativeZoom:16,maxZoom:18,async:true});
+var rdcllayer = L.tileLayer.canvas({attribution:"道路中心線",minZoom:10,maxNativeZoom:16,maxZoom:18,async:true});
 rdcllayer.drawTile = function(canvas, tilePoint, zoom) {
 	if(zoom>this.options.minZoom){
 	var urlid = "experimental_rdcl";
@@ -182,7 +182,7 @@ function rvrcl_style(feature){
 }
 
 //河川中心線レイヤ
-var rvrcllayer = L.tileLayer.canvas({attribution:"河川中心線",minZoom:14,maxNativeZoom:16,maxZoom:18,async:true});
+var rvrcllayer = L.tileLayer.canvas({attribution:"河川中心線",minZoom:10,maxNativeZoom:16,maxZoom:18,async:true});
 rvrcllayer.drawTile = function(canvas, tilePoint, zoom) {
 	if(zoom>this.options.minZoom){
 	var urlid = "experimental_rvrcl";
@@ -239,7 +239,7 @@ function railcl_style(feature){
 }
 
 //鉄道中心線レイヤ
-var railcllayer = L.tileLayer.canvas({attribution:"鉄道中心線",minZoom:14,maxNativeZoom:16,maxZoom:18,async:true});
+var railcllayer = L.tileLayer.canvas({attribution:"鉄道中心線",minZoom:10,maxNativeZoom:16,maxZoom:18,async:true});
 railcllayer.drawTile = function(canvas, tilePoint, zoom) {
 	if(zoom>this.options.minZoom){
 	var urlid = "experimental_railcl";
