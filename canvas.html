@@ -94,7 +94,10 @@ function featsearch(layerdata,tilePoint,zoom,dz,canvas,canvas_dx,canvas_dy,urlid
 
 //道路中心線スタイル
 function rdcl_style(feature){
-      if(feature.properties['rdCtg'] == "国道" || feature.properties['rdCtg'] == "都道府県道"){
+	if(feature.properties['rdCtg'] == "国道"){
+        return {setLineDash:[],strokeStyle:"#000",lineWidth:5,globalAlpha:0.5,lineCap:"butt"};
+	}
+      else if(feature.properties['rdCtg'] == "都道府県道"){
         return {setLineDash:[],strokeStyle:"#777777",lineWidth:5,globalAlpha:0.5,lineCap:"butt"};
       }
       else if(feature.properties['rdCtg'] == "高速自動車国道等"){
